@@ -24,7 +24,7 @@ const links = [
     icon: <Resume />,
   },
   {
-    href: "https://www.datdang.tech/",
+    href: "https://www.datdang.space/",
     label: "Website",
     icon: <Resume />,
     external: true,
