@@ -4,10 +4,10 @@ import App from "./App.tsx";
 import "./index.css";
 
 const messages: string[] = [
-  "Hi, I'm Henry Dang",
-  "I've been a software developer for around 2 years, and learned a lot.",
-  "I have been and always wanted to be a part of a team that create something useful, meaningful.",
-  "If you think we're on the same boat, then feel free to contact me.",
+  "Hi, I'm Henry Dang.",
+  "I turn product ideas into reliable, human-centered software.",
+  "Over the last few years, I've focused on shipping useful features with clean code.",
+  "If our values align, I'd love to connect and build something meaningful together.",
 ];
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

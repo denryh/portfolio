@@ -5,7 +5,14 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply bg-stone-950 text-stone-300;
-    }
+  body {
+    @apply bg-stone-950 text-stone-300 antialiased;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgb(37 99 235 / 0.2), transparent 28%),
+      radial-gradient(circle at 80% 90%, rgb(124 58 237 / 0.18), transparent 30%);
+  }
+
+  ::selection {
+    @apply bg-white text-stone-900;
+  }
 }

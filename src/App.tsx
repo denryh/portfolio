@@ -9,6 +9,7 @@ function App({ messages = [] }: { messages?: string[] }) {
   const timeoutRef = useRef<number>();
   const { currentScreen, nextScreen, resetScreen } = useScreen();
   const introDone = currentScreen >= messages.length;
+  const hasMessages = messages.length > 0;
 
   useEffect(() => {
     if (!introDone) {
@@ -26,9 +27,9 @@ function App({ messages = [] }: { messages?: string[] }) {
   }, [currentScreen, messages, nextScreen, introDone]);
 
   return (
-    <main className="relative h-screen p-2 text-center">
-      {renderScreen()}
-      <MainSection active={introDone} onReplay={resetScreen} />
+    <main className="relative min-h-screen overflow-hidden px-4 py-8 text-center">
+      {hasMessages ? renderScreen() : null}
+      <MainSection active={introDone || !hasMessages} onReplay={resetScreen} />
     </main>
   );
 
